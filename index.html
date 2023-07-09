@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Simulador de Cálculo de Promedio</title>
-  <script src="main.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -27,31 +27,6 @@
   <input type="number" id="cantidad-notas" min="1"><br>
 
   <button id="btn-calcular">Calcular Promedio</button>
-
-  <script>
-    // Variables necesarias
-    var notas = []; // Array para almacenar las notas ingresadas por el usuario
-
-    // Función para capturar las entradas y calcular el promedio
-    function calcularPromedio() {
-      var cantidadNotas = parseInt(document.getElementById('cantidad-notas').value);
-
-      for (var i = 0; i < cantidadNotas; i++) {
-        var nota = parseFloat(prompt('Ingrese la nota ' + (i + 1) + ':'));
-        notas.push(nota);
-      }
-
-      var total = 0;
-      for (var j = 0; j < notas.length; j++) {
-        total += notas[j];
-      }
-
-      var promedio = total / notas.length;
-      alert('El promedio es: ' + promedio);
-    }
-
-    // Event listener para el botón de calcular promedio
-    document.getElementById('btn-calcular').addEventListener('click', calcularPromedio);
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
